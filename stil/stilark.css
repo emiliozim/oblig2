@@ -1,0 +1,212 @@
+
+body{
+
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient( rgb(255, 196, 0), rgb(252, 235, 0));
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+img{    
+    width: 100%;
+}
+   
+/* grid for forside*/
+.masterGrid{
+
+    display: grid;
+    width: 100%;
+    max-width: 1400px; 
+    grid-column-gap: 10px; 
+    grid-template-areas:
+    "header header header"
+    "nav nav nav" 
+    "hovedkollone hovedkollone aside"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  5fr 3fr auto 1fr;
+  
+    margin: 0 auto;
+
+
+}
+/*grid for artikkel*/
+.artikkelGrid{
+    display: grid;
+    width: 100%;
+    max-width: 1400px; 
+    grid-column-gap: 10px; 
+    grid-template-areas:
+    "headerA headerA"
+    "navA navA"
+    "artikkelkollone artikkelkollone"
+    "footerA footerA ";
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:  1fr 1fr;
+
+    margin: 0 auto;
+}
+
+head{
+    grid-area: header;
+    margin-top: 200px;
+
+}
+.bgH1{
+    grid-area: header;
+    background-image: url(img/book2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+   
+}
+.hovedtxt{
+    grid-area: header;
+    text-align: center;
+    margin-top: 160px;
+    color: black;
+    text-shadow:
+    -1px -1px 0 rgb(255, 208, 0),
+    1px -1px 0 rgb(255, 208, 0),
+    -1px 1px 0 rgb(252, 235, 0),
+    1px 1px 0 rgb(252, 235, 0);
+    font-size: 44px;
+}
+
+.bgNav{
+    grid-area: nav;
+    background-image: url(img/pen.png);
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+}
+
+.mainNav{
+    grid-area: nav;
+    display: grid;
+    margin-left: 100px;
+    margin-right: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    align-items: center;
+}
+.mainNav a{
+    color: rgb(255, 238, 143);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: -130px;
+    
+}
+.mainNav a:hover{
+    text-decoration: underline;
+}
+.mainhovedkollone{
+    grid-area:hovedkollone;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainIndex h2{
+    font-size: 35px;
+}
+.mainIndex p{
+    font-size: 20px;
+}
+aside{
+    padding: 15px;
+    background-image: url(img/paper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-bottom: outset rgb(246, 238, 140);
+    border-right: outset rgb(246, 238, 140);
+}
+aside section{
+    margin-left: 50px;
+    font-size: 30px;
+
+}
+#asideNav{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+aside a{
+    text-decoration: none;
+    color: black;
+}
+aside a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    margin-top: 50px;
+    bottom: 0;
+
+}
+.h1Artikkel{
+    grid-area: headerA;
+    text-align: center;
+    margin-top: 160px;
+    color: black;
+}
+.bgNavA{
+    grid-area: navA;
+    background-image: url(img/pen.png);
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+}
+
+.mainNavA{
+    grid-area: navA;
+    display: grid;
+    margin-left: 100px;
+    margin-right: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    align-items: center;
+}
+.mainNavA a{
+    color: rgb(255, 238, 143);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: -140px;
+}
+.mainNavA a:hover{
+    text-decoration: underline;
+}
+#artikkelConteiner{
+    grid-area: artikkelkollone;
+    display: grid;
+    grid-template-areas:
+    "h2 h2 h2"
+    "tekst  tekst img";
+}
+#artikkelConteiner #artikkelh2{
+    grid-area: h2;
+    text-align: center;
+}
+
+#artikkelConteiner article{
+    grid-area: tekst;
+}
+#artikkelConteiner #fig{
+    grid-area: img; 
+}
+#bilde{
+    width: 40px;
+    height: 50px;
+}
+
+#artikkelFooter{
+    grid-area: footerA;
+
+    text-align: center;
+    margin-top: 50px;
+    bottom: 0;
+}
+.codeScreen{
+    width: 40%;
+    height: 40%;
+}
