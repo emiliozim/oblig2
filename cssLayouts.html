@@ -6,6 +6,8 @@
     <title>CSS Layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stil/stilark.css" />
+    <link rel="stylesheet" media="print" href="stil/print.css" />
+
     <script src="main.js"></script>
 </head>
 <body>
@@ -22,18 +24,40 @@
     </head>
     <main id="artikkelConteiner">
         <div id="artikkelh2">
-            <h2>CSS Layouts</h2>
+            <h2>CSS Flex vs CSS Grid</h2>
             <p>artikkeln ble gjort <time datetime="2018-09-15">01.10.2018</time></p>
         </div>
-        <figure id="fig">
-            <img class="bilde" src="stil/img/book2.png" alt="Tegning">
-            <figcaption>Dette er et test bilde</figcaption>
+        <figure>
+            <img class="flxVsGrid" src="stil/img/flexVsGrid.jpg" alt="Eksempel på CCS flex mot CCS grid.">
+            <figcaption>Eksempel på CCS flex vs CSS grid.</figcaption>
         </figure>
         <article>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium perferendis ipsum blanditiis accusamus voluptatum impedit sequi, sapiente assumenda eos iste iusto nam porro suscipit, aut dolore labore, nobis officia!
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem deleniti ex perspiciatis quidem ipsam possimus, beatae, consectetur sint, labore perferendis ad repellat quisquam dignissimos dolorem earum ipsum eos molestias recusandae?
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus velit saepe blanditiis! Consequuntur molestiae architecto illum? Est repellendus, nobis nisi cupiditate quisquam numquam possimus voluptatibus laboriosam necessitatibus maxime ex excepturi?
-           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, libero mollitia ratione ipsam culpa id minus odit quis. Laboriosam, reiciendis. Vel assumenda velit asperiores beatae ad quam pariatur sapiente quibusdam?</p>
+            <p>De mest populære CSS layoutene er CSS grid og CSS flex. Hovedforskjellen mellom disse er at CSS flex er designet for en dimensjon.
+                <figure>
+                    <img class="cssflextxt" src="stil/img/cssflextxt.png" alt="Eksempel på CCS flex.">
+                    <figcaption>Illustrasjon på CCS flex</figcaption>
+                </figure>  
+            Hvorav CSS grid er designet for to dimensjoner rekker og kolonner på samme tid slik som et rutefelt.
+                <figure>
+                    <img class="cssgridtxt" src="stil/img/cssgrid.png" alt="Eksempel på CCS grid.">
+                    <figcaption>Illustrasjon på CCS grid</figcaption>
+                </figure>  
+            CCS flex kan være lettere å bruke hvis du bare skal stile en rekke eller en kolonne, som for eksempel en meny, 
+            mens CSS grid kan være lønnsomt å bruke hvis du skal stile en hel nettside med header, nav, article, aside og footer. 
+            Med CSS grid kan man få lettere oversikt, spesielt hvis man bruker nettleseren Mozilla fireFox. Fordi der har man et verktøy, 
+            slik at man kan se griden på nettsiden. Så hvis du skal kontrollere layouten på en rekke ELLER en kolonne så bruk CSS flex. 
+                <figure>
+                    <img class="cssflextxt" src="stil/img/flex.png" alt="Eksempel på CCS flex.">
+                    <figcaption>Eksempel på CCS flex</figcaption>
+                </figure>
+            Men hvis man skal kontrollere layouten på en rekke OG kolonne så bruk CSS grid.
+            <figure>
+                    <img class="cssgridtxt" src="stil/img/grid.png" alt="Eksempel på CCS grid.">
+                    <figcaption>Eksempel på CCS grid</figcaption>
+            </figure>
+            <p>Det finnes også noe som heter CSS float, men den brukes kun til veldig simple layouts.</p>
+        
+            </p>
         </article>
         
         
